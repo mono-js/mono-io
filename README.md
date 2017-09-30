@@ -1,14 +1,13 @@
-# mono-io
+<h1 align="center"><img src="https://user-images.githubusercontent.com/904724/31045562-a4372be2-a5e6-11e7-9e89-188141fa503b.png" width="350" alt="Mono"/></h1>
 
-IO module for [Mono](https://github.com/terrajs/mono).
+> Socket.io module for [Mono](https://github.com/terrajs/mono)
 
 [![npm version](https://img.shields.io/npm/v/@terrajs/mono-io.svg)](https://www.npmjs.com/package/@terrajs/mono-io)
 [![Travis](https://img.shields.io/travis/terrajs/mono-io/master.svg)](https://travis-ci.org/terrajs/mono-io)
 [![Coverage](https://img.shields.io/codecov/c/github/terrajs/mono-io/master.svg)](https://codecov.io/gh/terrajs/mono-io.js)
 [![license](https://img.shields.io/github/license/terrajs/mono-io.svg)](https://github.com/terrajs/mono-io/blob/master/LICENSE)
 
-mono-io uses `socket.io` (https://github.com/socketio/socket.io)
-mono-io uses `socketio-jwt` (https://github.com/auth0-community/socketio-jwt) to handle sockets authorization with mono jwt
+Mono-io uses [socket.io](https://github.com/socketio/socket.io) and [socketio-jwt](https://github.com/auth0-community/socketio-jwt) to handle sockets with authorization via JWT.
 
 ## Installation
 
