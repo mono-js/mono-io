@@ -1,4 +1,4 @@
-<h1 align="center"><img src="https://user-images.githubusercontent.com/904724/31045562-a4372be2-a5e6-11e7-9e89-188141fa503b.png" width="350" alt="Mono"/></h1>
+<h1 align="center"><img src="https://user-images.githubusercontent.com/904724/31045653-d73c6302-a5e8-11e7-8db6-058077d4a848.png" width="350" alt="Mono"/></h1>
 
 > Socket.io module for [Mono](https://github.com/terrajs/mono)
 
