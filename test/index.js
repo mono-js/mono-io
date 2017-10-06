@@ -32,7 +32,10 @@ test('start() should open an io connection', async (t) => {
 	stdMocks.use()
 	const ctx = {
 		conf: {
-			io: {}
+			mono: {
+				jwt: {},
+				io: {}
+			}
 		},
 		log: {
 			module: () => ctx.log,
