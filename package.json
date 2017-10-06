@@ -1,6 +1,6 @@
 {
   "name": "@terrajs/mono-io",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "IO module for Mono",
   "main": "lib/",
   "files": [
