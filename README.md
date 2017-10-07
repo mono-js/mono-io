@@ -31,26 +31,10 @@ mono-io will use the `io` property of your configuration (example: `conf/develop
 
 ```js
 module.exports = {
-  io: {
-    // secret property is optional
-    secret: 'your secret or public key'
-  }
-}
-```
-
-You can also provide a function to get the secret:
-
-```js
-var SECRETS = {
-  'user1': 'secret 1',
-  'user2': 'secret 2'
-}
-
-module.exports = {
-  io: {
-    secret: function (request, decodedToken, callback) {
-      // SECRETS[decodedToken.userId] will be used a a secret or public key for connection user.
-      return callback(null, SECRETS[decodedToken.userId]);
+  mono: {
+    jwt: {
+      // secret property is optional and defaults to 'secret'
+      secret: 'your secret or public key'
     }
   }
 }
