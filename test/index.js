@@ -31,12 +31,6 @@ test('io should be undefined', (t) => {
 test('start() should open an io connection', async (t) => {
 	stdMocks.use()
 	const ctx = {
-		conf: {
-			mono: {
-				jwt: {},
-				io: {}
-			}
-		},
 		log: {
 			module: () => ctx.log,
 			info: console.log
