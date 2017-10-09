@@ -32,9 +32,8 @@ mono-io will use the `io` property of your configuration (example: `conf/develop
 ```js
 module.exports = {
   mono: {
-    jwt: {
-      // secret property is optional and defaults to 'secret'
-      secret: 'your secret or public key'
+    io: {
+      // See options here: https://github.com/socketio/socket.io/blob/master/docs/API.md#new-serverhttpserver-options
     }
   }
 }
@@ -48,6 +47,6 @@ In your modules files, you can access `io` instance:
 const { io } = require('@terrajs/mono-io')
 
 io.on('connection', function (socket) {
-  console.log(socket.decoded_token.name)
+  console.log(socket)
 })
 ```

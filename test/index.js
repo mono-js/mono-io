@@ -1,56 +1,23 @@
 const test = require('ava')
+const { join } = require('path')
 
-const express = require('express')
+const ioModule = require('../lib')
+const SocketIO = require('socket.io')
 
-const start = require('../lib')
+const { start, stop } = require('@terrajs/mono-test-utils')
 
-let server
-test.before('Start mono server', async (t) => {
-	const ctx = await mono('/fixtures/ko/')
+let ctx
+
+test('Io should be undefined when connection not opened', (t) => {
+	t.true(typeof ioModule.io === 'undefined')
 })
 
-// /*
-// ** Tests are run in serial
-// */
+test('Start mono server', async (t) => {
+	ctx = await start(join(__dirname, 'fixtures/ok/'))
 
-// test('io should be undefined', (t) => {
-// 	t.true(typeof start.io === 'undefined')
-// })
+	t.true(ctx.stdout.join().includes('[@terrajs/mono-io:mono-io] Socket io listening...'))
+	t.true(ioModule.io instanceof SocketIO)
 
-<<<<<<< HEAD
-test('start() should open an io connection', async (t) => {
-	stdMocks.use()
-	const ctx = {
-		log: {
-			module: () => ctx.log,
-			info: console.log
-		}
-	}
-	await start.call(ctx, '', server)
-	stdMocks.restore()
-	const { stdout, stderr } = stdMocks.flush()
-	t.is(stderr.length, 0)
-	t.is(stdout.length, 1)
-	t.true(stdout[0].includes('Listening...'))
+	await stop(ctx.server)
 })
-=======
-// test('start() should open an io connection', async (t) => {
-// 	stdMocks.use()
-// 	const ctx = {
-// 		conf: {
-// 			io: {}
-// 		},
-// 		log: {
-// 			module: () => ctx.log,
-// 			info: console.log
-// 		}
-// 	}
-// 	await start.call(ctx, '', server)
-// 	stdMocks.restore()
-// 	const { stdout, stderr } = stdMocks.flush()
-// 	t.is(stderr.length, 0)
-// 	t.is(stdout.length, 1)
-// 	t.true(stdout[0].includes('Listening...'))
-// })
->>>>>>> test: Update tests
 

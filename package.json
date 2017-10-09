@@ -31,11 +31,11 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.4",
-    "socket.io": "^2.0.3",
-    "socketio-jwt": "^4.5.0"
+    "socket.io": "^2.0.3"
   },
   "devDependencies": {
+    "@terrajs/mono": "^0.4.4",
+    "@terrajs/mono-test-utils": "^1.0.4",
     "ava": "^0.22.0",
     "codecov": "^2.3.0",
     "eslint": "^4.7.2",
