@@ -1,5 +1,5 @@
 {
-  "name": "@terrajs/mono-io",
+  "name": "mono-io",
   "version": "1.1.2",
   "description": "IO module for Mono",
   "main": "lib/",
@@ -34,14 +34,14 @@
     "socket.io": "^2.0.3"
   },
   "devDependencies": {
-    "@terrajs/mono": "^0.4.4",
-    "@terrajs/mono-test-utils": "^1.0.4",
+    "@terrajs/mono": "^0.4.11",
+    "mono-test-utils": "^1.0.4",
     "ava": "^0.22.0",
-    "codecov": "^2.3.0",
-    "eslint": "^4.7.2",
-    "express": "^4.15.5",
-    "nyc": "^11.1.0",
-    "rimraf": "^2.6.1",
+    "codecov": "^2.3.1",
+    "eslint": "^4.9.0",
+    "express": "^4.16.2",
+    "nyc": "^11.2.1",
+    "rimraf": "^2.6.2",
     "std-mocks": "^1.0.1"
   },
   "keywords": [

@@ -2,7 +2,7 @@
 
 > Socket.io module for [Mono](https://github.com/terrajs/mono)
 
-[![npm version](https://img.shields.io/npm/v/@terrajs/mono-io.svg)](https://www.npmjs.com/package/@terrajs/mono-io)
+[![npm version](https://img.shields.io/npm/v/mono-io.svg)](https://www.npmjs.com/package/mono-io)
 [![Travis](https://img.shields.io/travis/terrajs/mono-io/master.svg)](https://travis-ci.org/terrajs/mono-io)
 [![Coverage](https://img.shields.io/codecov/c/github/terrajs/mono-io/master.svg)](https://codecov.io/gh/terrajs/mono-io.js)
 [![license](https://img.shields.io/github/license/terrajs/mono-io.svg)](https://github.com/terrajs/mono-io/blob/master/LICENSE)
@@ -12,7 +12,7 @@ Mono-io uses [socket.io](https://github.com/socketio/socket.io) and [socketio-jw
 ## Installation
 
 ```bash
-npm install --save @terrajs/mono-io
+npm install --save mono-io
 ```
 
 Then, in your configuration file of your Mono application (example: `conf/application.js`):
@@ -20,7 +20,7 @@ Then, in your configuration file of your Mono application (example: `conf/applic
 ```js
 module.exports = {
   mono: {
-    modules: ['@terrajs/mono-io']
+    modules: ['mono-io']
   }
 }
 ```
@@ -44,7 +44,7 @@ module.exports = {
 In your modules files, you can access `io` instance:
 
 ```js
-const { io } = require('@terrajs/mono-io')
+const { io } = require('mono-io')
 
 io.on('connection', function (socket) {
   console.log(socket)
