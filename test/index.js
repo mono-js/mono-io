@@ -4,7 +4,7 @@ const { join } = require('path')
 const ioModule = require('../lib')
 const SocketIO = require('socket.io')
 
-const { start, stop } = require('mono-test-utils')
+const { start, stop, $get } = require('mono-test-utils')
 
 let ctx
 
@@ -18,6 +18,14 @@ test('Start mono server', async (t) => {
 	t.true(ctx.stdout.join().includes('[mono-io:mono-io] Socket io listening...'))
 	t.true(ioModule.io instanceof SocketIO)
 
-	await stop(ctx.server)
 })
 
+test('GET /socket.io/socket.io.js should exists', async (t) => {
+	const { statusCode } = await $get('/socket.io/socket.io.js')
+
+	t.is(statusCode, 200)
+})
+
+test.after('Stop mono server', async () => {
+	await stop(ctx.server)
+})
