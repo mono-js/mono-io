@@ -34,7 +34,7 @@
     "socket.io": "^2.0.3"
   },
   "devDependencies": {
-    "@terrajs/mono": "0.6.0",
+    "@terrajs/mono": "0.9.1",
     "mono-test-utils": "1.2.1",
     "ava": "0.22.0",
     "codecov": "2.3.1",
